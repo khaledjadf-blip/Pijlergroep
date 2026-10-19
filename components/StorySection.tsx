@@ -1,12 +1,10 @@
 import { Reveal } from "./Reveal";
-import { pillars } from "@/data/site";
+import { RichText } from "./RichText";
+import { pillarColors } from "@/data/site";
+import type { Dict } from "@/data/i18n";
 import { TrafficConeIcon, ShieldCheckIcon, ConnectIcon } from "./Icons";
 
-const iconMap = {
-  Vakmanschap: TrafficConeIcon,
-  Betrouwbaarheid: ShieldCheckIcon,
-  "Samen sterker": ConnectIcon,
-} as const;
+const icons = [TrafficConeIcon, ShieldCheckIcon, ConnectIcon] as const;
 
 const colorClass = {
   red: "text-brand-red border-brand-red/30",
@@ -14,7 +12,7 @@ const colorClass = {
   teal: "text-brand-teal border-brand-teal/30",
 } as const;
 
-export function StorySection() {
+export function StorySection({ t }: { t: Dict }) {
   return (
     <section
       id="verhaal"
@@ -31,7 +29,7 @@ export function StorySection() {
       <div className="wrap max-w-[860px]">
         <div className="mb-14">
           <Reveal>
-            <div className="section-label">Ons verhaal</div>
+            <div className="section-label">{t.story.label}</div>
           </Reveal>
           <Reveal delay={1}>
             <h2
@@ -43,59 +41,35 @@ export function StorySection() {
                 maxWidth: "820px",
               }}
             >
-              Niet bedacht vanachter een bureau — opgebouwd op de werkvloer.
+              {t.story.title}
             </h2>
           </Reveal>
         </div>
 
         <div>
-          <Reveal>
-            <p className="text-paper-dim text-[17px] leading-[1.85] mb-5 drop-cap">
-              Pijler Groep begon niet als een holding op papier, maar als een
-              aantal mensen die hetzelfde probleem steeds weer tegenkwamen:
-              bedrijven die goed werk leveren, maar die het lastig vinden om op
-              te schalen zonder hun kwaliteit te verliezen.
-            </p>
-          </Reveal>
-          <Reveal>
-            <p className="text-paper-dim text-[17px] leading-[1.85] mb-5">
-              Daarom brachten we drie specialismen onder één dak —{" "}
-              <strong className="text-paper font-semibold">
-                verkeersregelaars en verkeersmaatregelen
-              </strong>{" "}
-              bij Verkeersplus Services,{" "}
-              <strong className="text-paper font-semibold">
-                VCA-certificering en opleidingen
-              </strong>{" "}
-              bij VCA Veilig &amp; Vakkundig, en{" "}
-              <strong className="text-paper font-semibold">
-                professionele reiniging
-              </strong>{" "}
-              bij Netjes &amp; Klaar. Elk bedrijf blijft zelfstandig en
-              specialistisch, maar leunt op dezelfde pijlers van de groep: korte
-              lijnen, eerlijk werk en mensen die weten waar ze het over hebben.
-            </p>
-          </Reveal>
-          <Reveal>
-            <p className="text-paper-dim text-[17px] leading-[1.85] mb-5">
-              De naam <strong className="text-paper font-semibold">Pijler</strong>{" "}
-              is geen toeval. Een pijler draagt gewicht zonder op te vallen —
-              precies wat wij voor onze bedrijven en hun klanten willen zijn:
-              het stevige fundament waarop zij kunnen bouwen.
-            </p>
-          </Reveal>
+          {t.story.paragraphs.map((text, idx) => (
+            <Reveal key={idx}>
+              <p
+                className={`text-paper-dim text-[17px] leading-[1.85] mb-5 ${
+                  idx === 0 && t.dir === "ltr" ? "drop-cap" : ""
+                }`}
+              >
+                <RichText text={text} />
+              </p>
+            </Reveal>
+          ))}
 
           <Reveal>
             <div className="flex flex-col mt-9">
-              {pillars.map((pillar) => {
-                const Icon = iconMap[pillar.title as keyof typeof iconMap];
+              {t.story.pillars.map((pillar, idx) => {
+                const Icon = icons[idx];
                 return (
                   <div
                     key={pillar.title}
-                    className="group flex items-start gap-[22px] py-[26px] border-t border-line transition-[padding] duration-400 ease hover:pl-2"
+                    className="group flex items-start gap-[22px] py-[26px] border-t border-line transition-[padding] duration-400 ease hover:ps-2"
                   >
                     <div
-                      className={`w-11 h-11 flex items-center justify-center border transition-[border-color,background-color] duration-400 ease group-hover:bg-white/[0.03] group-hover:border-paper ${colorClass[pillar.brandColor]}`}
+                      className={`w-11 h-11 flex items-center justify-center border transition-[border-color,background-color] duration-400 ease group-hover:bg-white/[0.03] group-hover:border-paper ${colorClass[pillarColors[idx]]}`}
                     >
                       <Icon size={22} />
                     </div>

@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { companies, site } from "@/data/site";
 
-export const alt = `${site.name} — ${site.tagline}`;
+export const alt = `${site.name} — Eén fundament. Drie bedrijven die de klus klaren.`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

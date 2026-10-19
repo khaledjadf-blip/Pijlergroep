@@ -23,6 +23,21 @@
     scroll-behavior: smooth;
   }
 
+  /* Arabic: one font family for everything, no letter-spacing (it breaks
+     joined letters) and more line height for taller glyphs. */
+  html[dir="rtl"] {
+    --font-space-grotesk: var(--font-arabic);
+    --font-space-mono: var(--font-arabic);
+    --font-inter: var(--font-arabic);
+  }
+  html[dir="rtl"] * {
+    letter-spacing: 0 !important;
+  }
+  html[dir="rtl"] h1,
+  html[dir="rtl"] h2 {
+    line-height: 1.4 !important;
+  }
+
   body {
     font-feature-settings: "ss01", "cv11", "liga";
   }
@@ -186,6 +201,9 @@
   }
   .btn:hover .arrow {
     transform: translateX(4px);
+  }
+  [dir="rtl"] .btn:hover .arrow {
+    transform: translateX(-4px);
   }
   @media (max-width: 640px) {
     .btn {
