@@ -5,9 +5,26 @@ export function SiteFooter() {
   return (
     <footer className="border-t border-line py-11">
       <div className="wrap flex flex-wrap items-center justify-between gap-5 text-[12px] text-fog max-[640px]:flex-col max-[640px]:items-start">
-        <span>
-          © {year} {site.legalName} · Alle rechten voorbehouden
-        </span>
+        <div className="flex flex-col gap-1.5">
+          <span>
+            © {year} {site.legalName} · Alle rechten voorbehouden
+          </span>
+          <span>
+            <a
+              href={`mailto:${site.email}`}
+              className="text-paper-dim transition-colors duration-300 ease hover:text-paper"
+            >
+              {site.email}
+            </a>
+            {" · "}
+            <a
+              href={site.phoneHref}
+              className="text-paper-dim transition-colors duration-300 ease hover:text-paper"
+            >
+              {site.phone}
+            </a>
+          </span>
+        </div>
         <div className="flex flex-wrap gap-6 max-[640px]:gap-3.5">
           {companies.map((c) => (
             <a

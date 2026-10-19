@@ -120,6 +120,8 @@ export const site = {
     "Pijler Groep is de holding achter Verkeersplus Services, VCA Veilig & Vakkundig en Netjes & Klaar — drie bedrijven, één fundament.",
   established: 2025,
   email: "info@pijlergroep.nl",
+  phone: "+31 6 17325934",
+  phoneHref: "tel:+31617325934",
   url: "https://pijlergroep.nl",
   locale: "nl_NL",
 } as const;

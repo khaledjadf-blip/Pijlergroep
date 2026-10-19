@@ -77,6 +77,15 @@ const jsonLd = {
   legalName: site.legalName,
   url: site.url,
   email: site.email,
+  telephone: "+31617325934",
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "customer service",
+    email: site.email,
+    telephone: "+31617325934",
+    areaServed: "NL",
+    availableLanguage: ["nl"],
+  },
   foundingDate: `${site.established}`,
   description: site.description,
   address: {
