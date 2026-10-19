@@ -30,7 +30,7 @@ export function Hero() {
 
       {/* Corner tags */}
       <span className="hidden md:block absolute top-[100px] left-8 mono text-[10px] text-fog tracking-[0.15em] z-[3] pointer-events-none">
-        <span className="text-brand-red">◆</span> EST. 2025 · NL
+        <span className="text-brand-red">◆</span> SINDS 2025 · NL
       </span>
       <span className="hidden md:block absolute top-[100px] right-8 mono text-[10px] text-fog tracking-[0.15em] z-[3] pointer-events-none text-right">
         <span className="text-brand-gold">◆</span> HOLDING B.V.

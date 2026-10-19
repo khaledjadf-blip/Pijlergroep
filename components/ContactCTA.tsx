@@ -47,7 +47,7 @@ export function ContactCTA() {
             <a href={`mailto:${site.email}`} className="btn btn-primary">
               {site.email} <span className="arrow">→</span>
             </a>
-            <a href={site.phoneHref} className="btn btn-ghost">
+            <a href={`tel:${site.phoneE164}`} className="btn btn-ghost">
               {site.phone} <span className="arrow">→</span>
             </a>
             <a href="#bedrijven" className="btn btn-ghost">

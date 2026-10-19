@@ -40,7 +40,7 @@ export function SiteHeader() {
             <span className="font-medium text-fog">GROEP</span>
           </span>
           <span className="mono text-[9px] text-fog tracking-[0.2em] mt-1 ml-[30px] max-[640px]:ml-[26px]">
-            Holding · Since {site.established}
+            Holding · Sinds {site.established}
           </span>
         </Link>
 
@@ -58,7 +58,7 @@ export function SiteHeader() {
         </nav>
 
         <a
-          href="#contact"
+          href="/#contact"
           className="relative inline-flex items-center gap-2 border border-paper px-[22px] py-[11px] max-[640px]:px-4 max-[640px]:py-[9px] text-[12px] max-[640px]:text-[11px] font-bold tracking-[0.06em] uppercase transition-colors duration-350 ease overflow-hidden group hover:text-ink"
         >
           <span

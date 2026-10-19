@@ -29,7 +29,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} — Holding boven Verkeersplus, VCA Veilig & Vakkundig en Netjes & Klaar`,
+    default: `${site.name} — Holding van Verkeersplus, VCA Veilig & Vakkundig en Netjes & Klaar`,
     template: `%s | ${site.name}`,
   },
   description: site.description,
@@ -77,12 +77,18 @@ const jsonLd = {
   legalName: site.legalName,
   url: site.url,
   email: site.email,
-  telephone: "+31617325934",
+  telephone: site.phoneE164,
+  vatID: site.vat,
+  identifier: {
+    "@type": "PropertyValue",
+    propertyID: "KvK",
+    value: site.kvk,
+  },
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer service",
     email: site.email,
-    telephone: "+31617325934",
+    telephone: site.phoneE164,
     areaServed: "NL",
     availableLanguage: ["nl"],
   },

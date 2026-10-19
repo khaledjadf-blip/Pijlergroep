@@ -68,7 +68,7 @@ export function CompaniesSection() {
           <p className="section-sub">
             Elk bedrijf binnen Pijler Groep is zelfstandig en gespecialiseerd —
             samen dekken we een groot deel van wat opdrachtgevers in de bouw,
-            infra en evenementenwereld nodig hebben.
+            infra- en evenementenwereld nodig hebben.
           </p>
         </Reveal>
       </div>

@@ -63,7 +63,7 @@ export const pillars: Pillar[] = [
   {
     title: "Betrouwbaarheid",
     description:
-      "Afspraak is afspraak. Onze bedrijven staan bekend om doen wat ze zeggen — en op tijd.",
+      "Afspraak is afspraak. Onze bedrijven staan erom bekend dat ze doen wat ze zeggen — en op tijd.",
     brandColor: "gold",
   },
   {
@@ -106,22 +106,24 @@ export const whyCards: WhyCard[] = [
 ];
 
 export const nav = [
-  { href: "#verhaal", label: "Ons verhaal" },
-  { href: "#bedrijven", label: "Bedrijven" },
-  { href: "#waarom", label: "Waarom Pijler" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#verhaal", label: "Ons verhaal" },
+  { href: "/#bedrijven", label: "Bedrijven" },
+  { href: "/#waarom", label: "Waarom Pijler" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export const site = {
   name: "Pijler Groep",
-  legalName: "Pijler Groep — Holding B.V.",
+  legalName: "Pijler Groep B.V.",
   tagline: "Eén fundament. Drie bedrijven die de klus klaren.",
   description:
     "Pijler Groep is de holding achter Verkeersplus Services, VCA Veilig & Vakkundig en Netjes & Klaar — drie bedrijven, één fundament.",
   established: 2025,
   email: "info@pijlergroep.nl",
   phone: "+31 6 17325934",
-  phoneHref: "tel:+31617325934",
+  phoneE164: "+31617325934",
+  kvk: "42116611",
+  vat: "NL869804583B01",
   url: "https://pijlergroep.nl",
   locale: "nl_NL",
 } as const;

@@ -226,3 +226,32 @@
     animation: gradient-shift 8s ease-in-out infinite;
   }
 }
+
+/* Long-form text (privacyverklaring) */
+.privacy h2 {
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--color-paper);
+  margin: 44px 0 14px;
+}
+.privacy p,
+.privacy li {
+  color: var(--color-paper-dim);
+  font-size: 16px;
+  line-height: 1.8;
+}
+.privacy p {
+  margin-bottom: 14px;
+}
+.privacy ul {
+  list-style: disc;
+  padding-left: 22px;
+  margin-bottom: 14px;
+}
+.privacy a {
+  color: var(--color-paper);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

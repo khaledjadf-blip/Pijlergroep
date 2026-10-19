@@ -34,6 +34,11 @@ pijler-groep/
 ├── app/
 │   ├── layout.tsx        Root layout, fonts, metadata, JSON-LD
 │   ├── page.tsx          Home page composition
+│   ├── privacyverklaring/page.tsx  Privacy statement (AVG)
+│   ├── icon.svg          Favicon
+│   ├── apple-icon.tsx    Apple touch icon (generated)
+│   ├── opengraph-image.tsx  Social share image (generated)
+│   ├── twitter-image.tsx    Same image for Twitter/X
 │   ├── globals.css       Tailwind + design tokens + reveal system
 │   ├── sitemap.ts        SEO sitemap
 │   └── robots.ts         SEO robots
@@ -49,9 +54,7 @@ pijler-groep/
 │   ├── Reveal.tsx        IntersectionObserver reveal wrapper
 │   └── Icons.tsx         Inline SVG icons
 ├── data/
-│   └── site.ts           Companies, pillars, why-cards, nav, brand tokens
-├── public/
-│   └── images/           Static assets
+│   └── site.ts           Companies, pillars, why-cards, nav, contact & legal details
 ├── tailwind.config.ts    Brand tokens + custom animations
 ├── next.config.js
 ├── tsconfig.json
