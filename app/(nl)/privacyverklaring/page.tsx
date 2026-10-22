@@ -117,18 +117,6 @@ export default function PrivacyPage() {
           naar <a href={`mailto:${site.email}`}>{site.email}</a>; wij reageren
           binnen vier weken.
         </p>
-        <p>
-          Ben je het niet eens met de manier waarop wij met je gegevens omgaan?
-          Dan kun je een klacht indienen bij de{" "}
-          <a
-            href="https://autoriteitpersoonsgegevens.nl"
-            target="_blank"
-            rel="noopener"
-          >
-            Autoriteit Persoonsgegevens
-          </a>
-          .
-        </p>
 
         <h2>Wijzigingen</h2>
         <p>
