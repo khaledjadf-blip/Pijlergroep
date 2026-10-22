@@ -15,6 +15,12 @@ export function SiteFooter({ t }: { t: Dict }) {
             <bdi>{site.legalName}</bdi>
           </span>
           <span>
+            <bdi>
+              {site.address.street}, {site.address.postalCode}{" "}
+              {site.address.city}
+            </bdi>
+          </span>
+          <span>
             <a href={`mailto:${site.email}`} className={linkClass} dir="ltr">
               {site.email}
             </a>

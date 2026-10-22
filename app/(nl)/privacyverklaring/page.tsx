@@ -35,6 +35,10 @@ export default function PrivacyPage() {
           verklaring geldt voor de website {site.url.replace("https://", "")}.
         </p>
         <ul>
+          <li>
+            Adres: {site.address.street}, {site.address.postalCode}{" "}
+            {site.address.city}
+          </li>
           <li>KvK-nummer: {site.kvk}</li>
           <li>Btw-nummer: {site.vat}</li>
           <li>

@@ -31,6 +31,9 @@ function jsonLd(t: Dict) {
     description: t.meta.description,
     address: {
       "@type": "PostalAddress",
+      streetAddress: site.address.street,
+      postalCode: site.address.postalCode,
+      addressLocality: site.address.city,
       addressCountry: "NL",
     },
     subOrganization: companies.map((c) => ({

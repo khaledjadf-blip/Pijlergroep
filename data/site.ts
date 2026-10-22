@@ -46,6 +46,11 @@ export const site = {
   email: "info@pijlergroep.nl",
   phone: "+31 6 17325934",
   phoneE164: "+31617325934",
+  address: {
+    street: "Amersfoortsestraat 91-53",
+    postalCode: "3769 AH",
+    city: "Soesterberg",
+  },
   kvk: "42116611",
   vat: "NL869804583B01",
   url: "https://pijlergroep.nl",
