@@ -1,7 +1,8 @@
 import { Reveal } from "./Reveal";
 import { site } from "@/data/site";
+import type { Dict } from "@/data/i18n";
 
-export function ContactCTA() {
+export function ContactCTA({ t }: { t: Dict }) {
   return (
     <section
       id="contact"
@@ -21,7 +22,7 @@ export function ContactCTA() {
       <div className="wrap max-w-[760px] relative">
         <Reveal>
           <div className="section-label justify-center inline-flex after:content-[''] after:w-6 after:h-px after:bg-fog">
-            Contact
+            {t.contact.label}
           </div>
         </Reveal>
         <Reveal delay={1}>
@@ -33,22 +34,26 @@ export function ContactCTA() {
               letterSpacing: "-0.03em",
             }}
           >
-            Op zoek naar één van onze bedrijven, of wil je de groep spreken?
+            {t.contact.title}
           </h2>
         </Reveal>
         <Reveal delay={2}>
           <p className="text-paper-dim text-[17px] mb-10 leading-[1.7]">
-            Neem contact op met {site.name}, of ga direct naar het bedrijf dat
-            je nodig hebt.
+            {t.contact.text}
           </p>
         </Reveal>
         <Reveal delay={3}>
           <div className="flex flex-wrap gap-3.5 justify-center max-[640px]:flex-col max-[640px]:items-stretch">
             <a href={`mailto:${site.email}`} className="btn btn-primary">
-              {site.email} <span className="arrow">→</span>
+              <span dir="ltr">{site.email}</span>{" "}
+              <span className="arrow">{t.arrow}</span>
+            </a>
+            <a href={`tel:${site.phoneE164}`} className="btn btn-ghost">
+              <span dir="ltr">{site.phone}</span>{" "}
+              <span className="arrow">{t.arrow}</span>
             </a>
             <a href="#bedrijven" className="btn btn-ghost">
-              Bekijk bedrijven <span className="arrow">↑</span>
+              {t.contact.viewCompanies} <span className="arrow">↑</span>
             </a>
           </div>
         </Reveal>
